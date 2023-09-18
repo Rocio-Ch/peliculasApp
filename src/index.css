@@ -71,3 +71,18 @@ ul {
 	top: 40px;
 	width: 80%;
 }
+
+/* carrousel popular and top rated */
+.smallCarousel {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+  
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
