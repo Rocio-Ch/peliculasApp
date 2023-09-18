@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #030317!important;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+ul {
+    background-color: #030317;
+    color: white;
+}
+
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper, .css-11b3ww9-MuiPaper-root-MuiAppBar-root {
+    background-color: #030317!important;
+    
+}
+
+.css-1kkpk3h-MuiButtonBase-root-MuiButton-root {
+    text-transform: capitalize!important;
+    min-width: 0!important;
+    padding: 8px!important;
+}
+
+.css-130f8nx {
+    display: flex;
+    flex-grow: 1;
+}
+
+.css-wjh20t-MuiPagination-ul {
+    background-color: #030317;
+}
+
+.css-wjh20t-MuiPagination-ul li {
+    background-color: #030317;
+}
+
+.css-wjh20t-MuiPagination-ul li button, .css-1v2lvtn-MuiPaginationItem-root {
+    color: white!important;
+}
+
+.active {
+    background-color: #030317;
+}
+
+.active button {
+    /* background-color: #0a0a7b; */
+    background-color: #3b82f6;
+    border-radius: 50px!important;
+}
+
+.video-responsive {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+}
+
+.video-responsive iframe, .video-responsive object, .video-responsive embed {
+	height: 70%;
+	left: 11%;
+	position: absolute;
+	top: 40px;
+	width: 80%;
+}
