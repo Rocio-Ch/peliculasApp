@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+ */
 body {
     margin: 0;
     height: 100vh;
@@ -72,7 +74,7 @@ ul {
 	width: 80%;
 }
 
-/* carousel popular and top rated */
+/* carrousel popular and top rated */
 .smallCarousel {
     position: relative;
     height: 100%;
@@ -84,5 +86,5 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    align-items: center;
 }
