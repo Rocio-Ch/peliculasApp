@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import PaginationRounded from './PaginationRounded';
 import defaultPoster from '../assets/defaultPoster.png'
 
-export default function SearchContainer({ movieResults, setCurrentPage, currentPage, totalPages/* , search */ }) {
+export default function SearchContainer({ movieResults, setCurrentPage, currentPage, totalPages }) {
     return (
         <div className='mb-[70px]'>
             <div className='flex items-center justify-center mt-[100px] mx-[35px] mb-[30px]'>
@@ -33,7 +33,7 @@ export default function SearchContainer({ movieResults, setCurrentPage, currentP
                         )
                     })}        
             </section>
-            <PaginationRounded setCurrentPage={setCurrentPage} currentPage={currentPage} totalPages={totalPages} /* search={search} */ />
+            <PaginationRounded setCurrentPage={setCurrentPage} currentPage={currentPage} totalPages={totalPages} />
         </div>
     )
 }
