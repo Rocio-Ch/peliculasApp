@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import CarouselMoviesBanner from "./CarouselMoviesBanner"
+import CarouselPopular from "./CarouselPopular"
+import CarouselTopRated from "./CarouselTopRated"
 import SearchContainer from "./SearchContainer";
 
 const TOKEN_ACCESS_API = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YTYxOTcxYmZiODg1ZWU0YWU0NGIxMzk3YjhmZDRiNyIsInN1YiI6IjY0ZTNjMjNjYzNjODkxMDEwMDdhOWY0OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EORgrdqgriLzwW2MFHeyvmSzC3jqa7xs7Wpxc4PQaJg"
@@ -25,7 +27,17 @@ export default function MainContainer({ movieResults, setCurrentPage, currentPag
 
     return (
         <main className="flex flex-col flex-grow">
-            <CarouselMoviesBanner />
+            
+            {movieResults.length === 0 ? (
+                <>
+                    <CarouselMoviesBanner upComing={upComing} />
+                    <CarouselPopular />
+                    <CarouselTopRated />
+                </>
+                
+            ) : (
+                <SearchContainer movieResults={movieResults} setCurrentPage={setCurrentPage} currentPage={currentPage} totalPages={totalPages} />
+            )}
         </main>
     )
 }

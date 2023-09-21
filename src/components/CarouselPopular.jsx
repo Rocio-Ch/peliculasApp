@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { TOKEN_ACCESS_API, API_URL } from '../../apiTMDBapp'
 // Import Swiper React components and styles
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -9,18 +10,34 @@ import { Autoplay, Navigation } from 'swiper/modules';
 import { TbEyePlus } from 'react-icons/tb'
 export default function CarouselPopular() {
 
+const [popular, setPopular] = useState([])
 
+
+useEffect(() => {
+    const options = {
+        method: 'GET',
+        headers: {
+        accept: 'application/json',
+        Authorization: `Bearer ${TOKEN_ACCESS_API}`
+        }
+    };
+    
+    fetch(`${API_URL}/movie/popular?language=en-US&page=1`, options)
+    .then(response => response.json())
+    .then(data => setPopular(data.results))
+    .catch(err => console.error(err));
+}, []);
 
 return (
   <section className='mb-[100px]'>
-    <h3 className='text-center text-xl text-white md:text-3xl'>Peliculas Mejor Puntadas</h3>
+    <h3 className='text-center text-xl text-white md:text-3xl'>Popular Movies</h3>
     <Swiper
       loop={true}
       navigation={true}
-      autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //     delay: 2000,
+      //     disableOnInteraction: false,
+      // }}
       modules={[Autoplay, Navigation]}
       slidesPerView={1}
       breakpoints={{
@@ -43,14 +60,14 @@ return (
       }}
       className="mySwiper smallCarousel"
     >
-     
+      {popular.map((movie, index) => (
         <SwiperSlide key={index} className='hover:cursor-pointer'>
-          <img src='' alt="movie" className='h-full max-h-[350px]' />
-          <div className='text-white mt-[5px] flex justify-end'>
+          <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="movie" className='h-full max-h-[350px]' />
+          <div className='text-white mt-[5px] flex justify-end w-[258px]'>
             <TbEyePlus className='w-[17px] h-[17px]'/>
           </div>
         </SwiperSlide>
-    
+      ))}
     </Swiper>
   </section>
 );
