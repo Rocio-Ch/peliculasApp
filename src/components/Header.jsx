@@ -108,7 +108,7 @@ export default function Header({ setCurrentPage, setSearch }) {
                 </ListItemButton>
               </ListItem>
             </Link>
-            <Link to="/populares">
+            <Link to="/popular">
               <ListItem disablePadding>
                 <ListItemButton sx={{ textAlign: 'start', marginLeft:'25px' }}>
                   <ListItemText primary="Popular" />
@@ -146,12 +146,12 @@ export default function Header({ setCurrentPage, setSearch }) {
                         <AiFillHome size={20} />
                       </Button>
                   </NavLink>
-                  <NavLink to="/ultimosLanzamientos" activclassname="active">
+                  <NavLink to="/latest-releases" activeclassname="active">
                       <Button sx={{ color: '#fff' }}>
                       New releases
                       </Button>
                   </NavLink>
-                  <NavLink to="/populares" activeclassname="active">
+                  <NavLink to="/popular" activeclassname="active">
                       <Button sx={{ color: '#fff' }}>
                         Popular
                       </Button>

@@ -5,6 +5,8 @@ import MainContainer from './components/MainContainer';
 import DetailMovie from './components/DetailMovie';
 import Trailer from './components/Trailer';
 import NotFound from './components/NotFound';
+import LatestReleases from "./components/LatestReleases";
+import Popular from "./components/Popular";
 
 const API_KEY = "8a61971bfb885ee4ae44b1397b8fd4b7"
 
@@ -30,6 +32,8 @@ export default function App() {
       <Routes>
         <Route path='/' element={<MainContainer movieResults={movieResults} setCurrentPage={setCurrentPage} currentPage={currentPage} totalPages={totalPages} />} />
         <Route path='/search/:search' element={<MainContainer movieResults={movieResults} setCurrentPage={setCurrentPage} currentPage={currentPage} totalPages={totalPages} search={search} />} />
+        <Route path='/latest-releases' element={ <LatestReleases/> } />
+        <Route path='/popular' element={ <Popular/> } />
         <Route path='/description/:id' element={<DetailMovie />} />
         <Route path='/trailer/:id' element={<Trailer />} />
         <Route path='*' element={<NotFound />} />
