@@ -101,10 +101,10 @@ export default function Header({ setCurrentPage, setSearch }) {
                 </ListItemButton>
               </ListItem>
             </Link>
-            <Link to="/ultimosLanzamientos">
+            <Link to="/latest-releases">
               <ListItem disablePadding>
                 <ListItemButton sx={{ textAlign: 'start', marginLeft:'25px' }}>
-                  <ListItemText primary="New releases" />
+                  <ListItemText primary="Latest releases" />
                 </ListItemButton>
               </ListItem>
             </Link>
@@ -148,7 +148,7 @@ export default function Header({ setCurrentPage, setSearch }) {
                   </NavLink>
                   <NavLink to="/latest-releases" activeclassname="active">
                       <Button sx={{ color: '#fff' }}>
-                      New releases
+                      Latest releases
                       </Button>
                   </NavLink>
                   <NavLink to="/popular" activeclassname="active">

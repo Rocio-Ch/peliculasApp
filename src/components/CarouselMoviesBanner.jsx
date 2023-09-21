@@ -29,7 +29,7 @@ export default function CarouselMoviesBanner({ upComing }) {
         }}
         modules={[EffectFade, Navigation, Pagination, Autoplay]}
         loop={true}
-        className="mySwiper relative w-full max-h-[750px] mt-[90px]"
+        className="mySwiper relative w-full max-h-[750px] mt-[90px] mb-[100px]"
       >
         {upComing && 
           upComing.map((movie) => (

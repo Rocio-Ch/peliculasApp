@@ -30,7 +30,7 @@ export default function Popular() {
             <h1 className='text-center text-xl md:text-3xl py-[25px] mt-5'>Popular Movies</h1>
             <section className="mx-[35px] flex flex-wrap justify-center">
                 {popular.map((movie) => (
-                    <Link to="/popular" key={movie.id}>
+                    <Link to={`/description/${movie.id}`} key={movie.id}>
                         <Card className='w-[250px] h-[340px] m-10 hover:transition hover:duration-300 hover:ease-in-out hover:shadow-lg dark:hover:shadow-[0px_5px_30px_0px_rgba(24,17,167,79%)] hover:scale-105'>
                             <CardMedia
                                 className='h-[300px]'
