@@ -63,7 +63,7 @@ return (
       {topRated.map((movie, index) => (
         <SwiperSlide key={index} className='hover:cursor-pointer'>
           <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="movie" className='h-full max-h-[350px]' />
-          <div className='text-white mt-[5px] flex justify-end'>
+          <div className='text-white mt-[5px] flex justify-end w-[225px]'>
             <TbEyePlus className='w-[17px] h-[17px]'/>
           </div>
         </SwiperSlide>
