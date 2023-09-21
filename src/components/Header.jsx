@@ -69,7 +69,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 
-export default function Header() {
+export default function Header({ setCurrentPage, setSearch }) {
+
+    function handleChangeInput(e) {
+      setCurrentPage(1)
+      setSearch(e.target.value)
+    }
+
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
@@ -98,14 +104,14 @@ export default function Header() {
             <Link to="/ultimosLanzamientos">
               <ListItem disablePadding>
                 <ListItemButton sx={{ textAlign: 'start', marginLeft:'25px' }}>
-                  <ListItemText primary="Ultimos lanzamientos" />
+                  <ListItemText primary="New releases" />
                 </ListItemButton>
               </ListItem>
             </Link>
             <Link to="/populares">
               <ListItem disablePadding>
                 <ListItemButton sx={{ textAlign: 'start', marginLeft:'25px' }}>
-                  <ListItemText primary="Populares" />
+                  <ListItemText primary="Popular" />
                 </ListItemButton>
               </ListItem>
             </Link>
@@ -115,7 +121,7 @@ export default function Header() {
   
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', position: 'absolute', zIndex: '1' }}>
             <CssBaseline />
             <AppBar component="nav">
             <Toolbar sx={{ padding: '10px' }}>
@@ -142,12 +148,12 @@ export default function Header() {
                   </NavLink>
                   <NavLink to="/ultimosLanzamientos" activclassname="active">
                       <Button sx={{ color: '#fff' }}>
-                        Ultimos Lanzamientos
+                      New releases
                       </Button>
                   </NavLink>
                   <NavLink to="/populares" activeclassname="active">
                       <Button sx={{ color: '#fff' }}>
-                        Populares
+                        Popular
                       </Button>
                   </NavLink>
                 </Box>
@@ -156,7 +162,9 @@ export default function Header() {
                     <SearchIcon />
                 </SearchIconWrapper>
                 <StyledInputBase
-                    placeholder="Buscar.."
+                    onChange={handleChangeInput}
+                    id="inputSearch"
+                    placeholder="Search.."
                     inputProps={{ 'aria-label': 'search' }}
                 />
                 </Search>
