@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { API_KEY, API_URL } from "../apiTMDBapp";
 import Header from './components/Header';
 import MainContainer from './components/MainContainer';
 import DetailMovie from './components/DetailMovie';
@@ -8,7 +9,6 @@ import NotFound from './components/NotFound';
 import LatestReleases from "./components/LatestReleases";
 import Popular from "./components/Popular";
 
-const API_KEY = "8a61971bfb885ee4ae44b1397b8fd4b7"
 
 export default function App() {
 
@@ -18,7 +18,7 @@ export default function App() {
   const [totalPages, setTotalPages] = useState()
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}${search ? `&query=${search}` : ""}&page=${currentPage}`)   
+    fetch(`${API_URL}/search/movie?api_key=${API_KEY}${search ? `&query=${search}` : ""}&page=${currentPage}`)   
       .then((response) => response.json())
       .then((data) => {
         setTotalPages(data.total_pages)

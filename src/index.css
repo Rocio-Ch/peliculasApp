@@ -100,7 +100,7 @@ ul {
     position:relative;
     height:100vh;
     background:#030005;
-    z-index: 2;
+    z-index: 4;
 }
 
 #notfound .notfound {

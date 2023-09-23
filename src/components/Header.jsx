@@ -1,30 +1,27 @@
-import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-//search
-import { styled, alpha } from '@mui/material/styles';
-import InputBase from '@mui/material/InputBase';
-import SearchIcon from '@mui/icons-material/Search';
-//Logo
-import LogoPag from '../assets/logo2.png'
-//close icon
+import React from 'react'
 import { MdClose } from 'react-icons/md'
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { AiFillHome } from 'react-icons/ai'
+import { styled, alpha } from '@mui/material/styles'
+import AppBar from '@mui/material/AppBar'
+import Box from '@mui/material/Box'
+import CssBaseline from '@mui/material/CssBaseline'
+import Divider from '@mui/material/Divider'
+import Drawer from '@mui/material/Drawer'
+import IconButton from '@mui/material/IconButton'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemText from '@mui/material/ListItemText'
+import MenuIcon from '@mui/icons-material/Menu'
+import Toolbar from '@mui/material/Toolbar'
+import Button from '@mui/material/Button'
+import InputBase from '@mui/material/InputBase'
+import SearchIcon from '@mui/icons-material/Search'
+import LogoPag from '../assets/logo2.png'
 
 
-const drawerWidth = 240;
+const drawerWidth = 240
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -39,7 +36,7 @@ const Search = styled('div')(({ theme }) => ({
     marginLeft: theme.spacing(1),
     width: 'auto',
   },
-}));
+}))
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
@@ -49,7 +46,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-}));
+}))
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
@@ -66,21 +63,24 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
       },
     },
   },
-}));
+}))
 
 
 export default function Header({ setCurrentPage, setSearch }) {
 
+  const navigate = useNavigate()
+
     function handleChangeInput(e) {
       setCurrentPage(1)
       setSearch(e.target.value)
+      navigate("/")
     }
 
-    const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [mobileOpen, setMobileOpen] = React.useState(false)
 
     const handleDrawerToggle = () => {
-      setMobileOpen((prevState) => !prevState);
-    };
+      setMobileOpen((prevState) => !prevState)
+    }
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -117,11 +117,11 @@ export default function Header({ setCurrentPage, setSearch }) {
             </Link>
           </List>
         </Box>
-      );
+      )
   
 
     return (
-        <Box sx={{ display: 'flex', position: 'absolute', zIndex: '1' }}>
+        <Box sx={{ display: 'flex', position: 'absolute', zIndex: '2' }}>
             <CssBaseline />
             <AppBar component="nav">
             <Toolbar sx={{ padding: '10px' }}>

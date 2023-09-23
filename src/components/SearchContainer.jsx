@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Link } from 'react-router-dom';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import PaginationRounded from './PaginationRounded';
+import * as React from 'react'
+import { Link } from 'react-router-dom'
+import Card from '@mui/material/Card'
+import CardMedia from '@mui/material/CardMedia'
+import Typography from '@mui/material/Typography'
+import PaginationRounded from './PaginationRounded'
 import defaultPoster from '../assets/defaultPoster.png'
 
 export default function SearchContainer({ movieResults, setCurrentPage, currentPage, totalPages }) {
@@ -13,7 +13,7 @@ export default function SearchContainer({ movieResults, setCurrentPage, currentP
                 <h2 className='text-2xl my-4 text-white underline underline-offset-8 decoration-blue-500'>Resultados de busqueda</h2>
             </div>
             <section className="mx-[35px] mb-[80px] flex flex-wrap justify-center">
-                {movieResults && movieResults.map((movie) => {
+                {movieResults?.map((movie) => {
                         return (
                             <Link key={movie.id} to={`/description/${movie.id}`}>
                                 <Card className='w-[250px] h-[340px] m-10 hover:transition hover:duration-300 hover:ease-in-out hover:shadow-lg dark:hover:shadow-[0px_5px_30px_0px_rgba(24,17,167,79%)] hover:scale-105'>
