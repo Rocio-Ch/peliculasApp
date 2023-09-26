@@ -15,14 +15,15 @@ body {
   height: 100%;
 }
 
-ul {
-  background-color: #040434;
-  color: white;
+.MuiToolbar-root,
+ul,
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper,
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root  {
+  background-color: #040434!important;
 }
 
-.css-4t3x6l-MuiPaper-root-MuiDrawer-paper,
-.css-11b3ww9-MuiPaper-root-MuiAppBar-root {
-  background-color: #040434 !important;
+ul {
+  color: white;
 }
 
 .css-1kkpk3h-MuiButtonBase-root-MuiButton-root {
