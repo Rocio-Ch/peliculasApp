@@ -41,7 +41,8 @@ body {
 }
 
 .css-wjh20t-MuiPagination-ul li button,
-.css-1v2lvtn-MuiPaginationItem-root {
+.css-1v2lvtn-MuiPaginationItem-root,
+.css-2gftvx {
   color: white !important;
 }
 
@@ -55,7 +56,7 @@ body {
 }
 
 /* ACTIVE BUTTON NAVIGATION STYLE */
-.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected, .css-2gftvx {
   background-color: #3b82f6 !important;
 }
 
