@@ -56,7 +56,8 @@ body {
 }
 
 /* ACTIVE BUTTON NAVIGATION STYLE */
-.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected, .css-2gftvx {
+.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected, 
+.css-2gftvx.Mui-selected {
   background-color: #3b82f6 !important;
 }
 
