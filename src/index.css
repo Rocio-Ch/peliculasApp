@@ -18,14 +18,17 @@ body {
 .MuiToolbar-root,
 ul,
 .css-4t3x6l-MuiPaper-root-MuiDrawer-paper,
-.css-11b3ww9-MuiPaper-root-MuiAppBar-root,
-.css-wf16b5 {
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root {
   background-color: #040434!important;
 }
 
-ul {
-  color: white;
-}
+/* .css-wjh20t-MuiPagination-ul li {
+  background-color: #030317!important;
+} */
+
+/* .MuiPagination-ul .css-nhb8h9 {
+  color: white!important;
+} */
 
 .css-1kkpk3h-MuiButtonBase-root-MuiButton-root {
   text-transform: capitalize !important;
@@ -39,11 +42,13 @@ ul {
 }
 
 .css-wjh20t-MuiPagination-ul {
-  background-color: #030317;
+  /* background-color: #030317; */
+  background-color: transparent!important;
 }
 
 .css-wjh20t-MuiPagination-ul li {
-  background-color: #030317;
+  /* background-color: #030317; */
+  background-color: transparent!important;
 }
 
 .css-wjh20t-MuiPagination-ul li button,
