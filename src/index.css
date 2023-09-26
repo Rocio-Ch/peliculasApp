@@ -1,192 +1,193 @@
-@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-    margin: 0;
-    height: 100vh;
-    background-color: #030317!important;
+  margin: 0;
+  height: 100vh;
+  background-color: #030317 !important;
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 ul {
-    background-color: #030317;
-    color: white;
+  background-color: #040434;
+  color: white;
 }
 
-.css-4t3x6l-MuiPaper-root-MuiDrawer-paper, .css-11b3ww9-MuiPaper-root-MuiAppBar-root {
-    background-color: #030317!important;
-    
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper,
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root {
+  background-color: #040434 !important;
 }
 
 .css-1kkpk3h-MuiButtonBase-root-MuiButton-root {
-    text-transform: capitalize!important;
-    min-width: 0!important;
-    padding: 8px!important;
+  text-transform: capitalize !important;
+  min-width: 0 !important;
+  padding: 8px !important;
 }
 
 .css-130f8nx {
-    display: flex;
-    flex-grow: 1;
+  display: flex;
+  flex-grow: 1;
 }
 
 .css-wjh20t-MuiPagination-ul {
-    background-color: #030317;
+  background-color: #030317;
 }
 
 .css-wjh20t-MuiPagination-ul li {
-    background-color: #030317;
+  background-color: #030317;
 }
 
-.css-wjh20t-MuiPagination-ul li button, .css-1v2lvtn-MuiPaginationItem-root {
-    color: white!important;
+.css-wjh20t-MuiPagination-ul li button,
+.css-1v2lvtn-MuiPaginationItem-root {
+  color: white !important;
 }
 
 .active {
-    background-color: #030317;
+  background-color: #030317;
 }
 
 .active button {
-    background-color: #3b82f6;
-    border-radius: 50px!important;
+  background-color: #3b82f6;
+  border-radius: 50px !important;
 }
 
 /* ACTIVE BUTTON NAVIGATION STYLE */
 .css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
-    background-color: #3b82f6!important;
+  background-color: #3b82f6 !important;
 }
 
 .video-responsive {
-	height: 0;
-	overflow: hidden;
-	padding-bottom: 56.25%;
-	position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
 }
 
-.video-responsive iframe, .video-responsive object, .video-responsive embed {
-	height: 70%;
-	left: 9.5%;
-	position: absolute;
-	top: 40px;
-	width: 80%;
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+  height: 70%;
+  left: 9.5%;
+  position: absolute;
+  top: 40px;
+  width: 80%;
 }
 
 /* carrousel popular and top rated */
 .smallCarousel {
-    position: relative;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 
 /* NOT FOUND */
 
 #notfound {
-    position:relative;
-    height:100vh;
-    background:#030005;
-    z-index: 4;
+  position: relative;
+  height: 100vh;
+  background: #030005;
+  z-index: 4;
 }
 
 #notfound .notfound {
-    position:absolute;
-    left:50%;
-    top:50%;
-    -webkit-transform:translate(-50%,-50%);
-    -ms-transform:translate(-50%,-50%);
-    transform:translate(-50%,-50%)
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .notfound {
-    max-width:767px;
-    width:100%;
-    line-height:1.4;
-    text-align:center
+  max-width: 767px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .notfound .notfound-404 {
-    position:relative;
-    height:180px;
-    margin-bottom:20px;
-    z-index:-1
+  position: relative;
+  height: 180px;
+  margin-bottom: 20px;
+  z-index: -1;
 }
 
 .notfound .notfound-404 h2 {
-    font-family:montserrat,sans-serif;
-    position:absolute;
-    left:50%;
-    top:50%;
-    -webkit-transform:translate(-50%,-50%);
-    -ms-transform:translate(-50%,-50%);
-    transform:translate(-50%,-50%);
-    font-size:224px;
-    font-weight:900;
-    margin-top:0;
-    margin-bottom:0;
-    margin-left:-12px;
-    color:#030005;
-    text-transform:uppercase;
-    text-shadow:-1px -1px 0 #1cfece, 1px 1px 0 #d800ff;
-    letter-spacing:-20px
+  font-family: montserrat, sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 224px;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -12px;
+  color: #030005;
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0 #1cfece, 1px 1px 0 #d800ff;
+  letter-spacing: -20px;
 }
 
 .notfound .notfound-404 h3 {
-    font-family:montserrat,sans-serif;
-    position:absolute;
-    left:0;
-    right:0;
-    top:110px;
-    font-size:42px;
-    font-weight:700;
-    color:#fff;
-    text-transform:uppercase;
-    text-shadow: 2px 2px 0 #fdd20d;
-    letter-spacing:13px;
-    margin:0
+  font-family: montserrat, sans-serif;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 110px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #fdd20d;
+  letter-spacing: 13px;
+  margin: 0;
 }
 
 .notfound span {
-    font-family:montserrat,sans-serif;
-    display:inline-block;
-    text-transform:uppercase;
-    color: #00ffa3;
-    text-decoration:none;
-    border:2px solid;
-    background:0 0;
-    padding:10px 40px;
-    font-size:14px;
-    font-weight:700;
-    -webkit-transition:.2s all;
-    transition:.2s all
+  font-family: montserrat, sans-serif;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #00ffa3;
+  text-decoration: none;
+  border: 2px solid;
+  background: 0 0;
+  padding: 10px 40px;
+  font-size: 14px;
+  font-weight: 700;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
 }
 
 .notfound span:hover {
-    color:#d800ff;
+  color: #d800ff;
 }
 
-@media only screen and (max-width:767px) {
-    .notfound .notfound-404 h3 {
-        font-size:24px
-    }   
+@media only screen and (max-width: 767px) {
+  .notfound .notfound-404 h3 {
+    font-size: 24px;
+  }
 }
 
-@media only screen and (max-width:480px) {
-    .notfound .notfound-404 h2 {
-        font-size:182px
-    }
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 h2 {
+    font-size: 182px;
+  }
 }

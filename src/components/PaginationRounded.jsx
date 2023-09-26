@@ -1,10 +1,13 @@
-import Pagination from '@mui/material/Pagination'
-import Stack from '@mui/material/Stack'
+import Pagination from "@mui/material/Pagination"
+import Stack from "@mui/material/Stack"
 
-export default function PaginationRounded({ setCurrentPage, currentPage, totalPages }) {
-
+export default function PaginationRounded({
+  setCurrentPage,
+  currentPage,
+  totalPages,
+}) {
   function handleChangePage(e, page) {
-    setCurrentPage(page)
+    setCurrentPage(page);
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -12,8 +15,18 @@ export default function PaginationRounded({ setCurrentPage, currentPage, totalPa
   }
 
   return (
-    <Stack spacing={2} margin="30px" sx={{display:"flex", justifyContent:"center", alignItems:"center" }}>
-      <Pagination onChange={handleChangePage} count={totalPages} variant="outlined" shape="rounded" page={currentPage} />
+    <Stack
+      spacing={2}
+      margin="30px"
+      sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+    >
+      <Pagination
+        onChange={handleChangePage}
+        count={totalPages}
+        variant="outlined"
+        shape="rounded"
+        page={currentPage}
+      />
     </Stack>
   )
 }

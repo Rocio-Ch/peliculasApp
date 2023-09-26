@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 
 export default function useLoading(initialDelay = 1000) {
   
-    const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const timer = setTimeout(() => {
