@@ -19,7 +19,7 @@ export default function CarouselPopular() {
 
   return (
     <section className='mb-[100px]'>
-      <h3 className='text-start text-xl text-white md:text-3xl lg:text-[40px] ml-5'>Popular Movies</h3>
+      <h3 className="text-start text-xl text-white md:text-3xl lg:text-[40px] ml-5 font-['Limelight']">Popular Movies</h3>
       <Swiper
         loop={true}
           autoplay={{

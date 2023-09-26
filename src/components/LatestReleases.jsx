@@ -8,20 +8,21 @@ import SpinnerMovie from './SpinnerMovie'
 import Typography from '@mui/material/Typography'
 import useDataMovies from "../customHooks/useDataMovies"
 import useLoading from '../customHooks/useLoading'
+import PaginationRounded from './PaginationRounded'
 
 export default function LatestReleases() {
 
-  const { getData, data } = useDataMovies()
+  const { getData, data, totalPages, currentPage, setCurrentPage } = useDataMovies()
   const loading = useLoading()
 
   useEffect(() => {
-      getData(`${API_URL}/movie/now_playing?api_key=${API_KEY}`)
-  }, [])
+      getData(`${API_URL}/movie/now_playing?api_key=${API_KEY}&page=${currentPage}`)
+  }, [currentPage, totalPages])
 
   return (
-    <section className='bg-[#030317] text-white pt-24'>
-      <h1 className='text-center text-xl md:text-3xl py-[25px] mt-5 font-semibold'>Latest Releases</h1>
-      <section className="mx-[35px] flex flex-wrap justify-center">
+    <section className='h-full bg-[#030317] flex flex-col text-white pt-24'>
+      <h1 className="font-['Limelight'] uppercase text-center text-xl md:text-3xl py-[25px] mt-5 lg:text-[40px]">Latest Releases</h1>
+      <section className="mx-[35px] flex flex-wrap grow justify-center">
         {loading ? (
             <SpinnerMovie />
           ) : (
@@ -44,6 +45,7 @@ export default function LatestReleases() {
             </>
         )}
       </section>
+      <PaginationRounded totalPages={totalPages} setCurrentPage={setCurrentPage} currentPage={currentPage} />
     </section>
   )
 }

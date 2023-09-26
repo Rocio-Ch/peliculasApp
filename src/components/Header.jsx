@@ -19,6 +19,7 @@ import Button from '@mui/material/Button'
 import InputBase from '@mui/material/InputBase'
 import SearchIcon from '@mui/icons-material/Search'
 import LogoPag from '../assets/logo2.png'
+import useDataMovies from '../customHooks/useDataMovies'
 
 
 const drawerWidth = 240
@@ -52,7 +53,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
@@ -66,9 +66,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }))
 
 
-export default function Header({ setCurrentPage, setSearch }) {
+export default function Header({ setSearch }) {
 
   const navigate = useNavigate()
+
+  const { setCurrentPage } = useDataMovies()
 
     function handleChangeInput(e) {
       setCurrentPage(1)

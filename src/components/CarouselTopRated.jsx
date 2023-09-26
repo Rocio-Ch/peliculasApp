@@ -18,7 +18,7 @@ export default function CarouselTopRated() {
 
   return (
     <section>
-      <h3 className='text-start text-xl text-white md:text-3xl lg:text-[40px] ml-5'>Top Rated Movies</h3>
+      <h3 className="text-start text-xl text-white md:text-3xl lg:text-[40px] ml-5 font-['Limelight']">Top Rated Movies</h3>
       <Swiper
         loop={true}
         autoplay={{

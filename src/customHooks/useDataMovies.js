@@ -6,15 +6,18 @@ export default function useDataMovies() {
 
   const navigate = useNavigate()
   const [data, setData] = useState([])
+  const [totalPages, setTotalPages] = useState()
+  const [currentPage, setCurrentPage] = useState(1)
 
   const getData = async (url) => {
     try {
       const { data } = await axios.get(url)
         setData(data)
+        setTotalPages(data.total_pages)
     } catch (error) {
         navigate("/not-found")
     }
   }
    
-  return { getData, data }
+  return { getData, setCurrentPage, data, totalPages, currentPage }
 }
