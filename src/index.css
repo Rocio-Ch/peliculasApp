@@ -20,12 +20,18 @@ body {
 .css-11b3ww9-MuiPaper-root-MuiAppBar-root,
 .css-wf16b5 {
   background-color: #040434!important;
+  color: #fff!important;
 }
 
 .css-1kkpk3h-MuiButtonBase-root-MuiButton-root {
   text-transform: capitalize !important;
   min-width: 0 !important;
   padding: 8px !important;
+}
+
+.css-1kkpk3h-MuiButtonBase-root-MuiButton-root:hover {
+  background-color: #3b82f6!important;
+  border-radius: 40px;
 }
 
 .css-130f8nx {
@@ -50,10 +56,6 @@ body {
 .css-2gftvx,
 .css-wf16b5 {
   color: white !important;
-}
-
-.active {
-  background-color: #030317;
 }
 
 .active button {
