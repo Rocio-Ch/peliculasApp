@@ -1,14 +1,8 @@
 import * as React from "react"
 import { useEffect } from "react"
-import { Link } from "react-router-dom"
 
 // Environment Variables
 import { API_KEY, API_URL } from "../../apiTMDBapp"
-
-// Material UI components and styles
-import Card from "@mui/material/Card"
-import CardMedia from "@mui/material/CardMedia"
-import Typography from "@mui/material/Typography"
 
 // Components
 import SpinnerMovie from "./SpinnerMovie"
@@ -17,6 +11,7 @@ import PaginationRounded from "./PaginationRounded"
 // Custom Hooks
 import useDataMovies from "../customHooks/useDataMovies"
 import useLoading from "../customHooks/useLoading"
+import CardMovie from "./CardMovie"
 
 export default function LatestReleases() {
   const { getData, data, totalPages, currentPage, setCurrentPage } =
@@ -40,27 +35,7 @@ export default function LatestReleases() {
         ) : (
           <>
             {data.results?.map((movie) => (
-              <Link to={`/description/${movie.id}`} key={movie.id}>
-                <Card className="w-[250px] h-[340px] m-10 hover:transition hover:duration-300 hover:ease-in-out hover:shadow-lg dark:hover:shadow-[0px_5px_30px_0px_rgba(24,17,167,79%)] hover:scale-105">
-                  <CardMedia
-                    className="h-[300px]"
-                    component="img"
-                    alt={movie.title}
-                    image={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                  />
-                  <Typography
-                    sx={{
-                      padding: "8px",
-                      textAlign: "center",
-                      fontWeight: "700",
-                      fontSize: "1.1rem",
-                    }}
-                    component="div"
-                  >
-                    {movie.title}
-                  </Typography>
-                </Card>
-              </Link>
+              <CardMovie key={movie.id} id={movie.id} title={movie.title} poster={movie.poster_path}  />
             ))}
           </>
         )}
