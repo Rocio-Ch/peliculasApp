@@ -1,12 +1,22 @@
 import * as React from "react"
 import { useEffect } from "react"
-import { API_KEY, API_URL } from "../../apiTMDBapp"
 import { Link } from "react-router-dom"
+
+// Environment Variables
+import { API_KEY, API_URL } from "../../apiTMDBapp"
+
+// Custom Hooks
 import useDataMovies from "../customHooks/useDataMovies"
+
+// Material UI componentes and styles
 import Card from "@mui/material/Card"
 import CardMedia from "@mui/material/CardMedia"
 import Typography from "@mui/material/Typography"
+
+// Components
 import PaginationRounded from "./PaginationRounded"
+
+// Images
 import defaultPoster from "../assets/defaultPoster.png"
 
 export default function SearchContainer({ search }) {

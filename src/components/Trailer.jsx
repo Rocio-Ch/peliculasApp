@@ -1,11 +1,20 @@
 import { useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
+
+// Environment Variables
 import { API_URL, API_KEY } from "../../apiTMDBapp"
+
+// Icons
 import { RiCloseLine } from "react-icons/ri"
-import { Link } from "react-router-dom"
+
+// Components
 import SpinnerMovie from "./SpinnerMovie"
+
+// Custom Hooks
 import useLoading from "../customHooks/useLoading"
 import useDataMovies from "../customHooks/useDataMovies"
+
+// Images
 import noTrailer from "../assets/noTrailer.gif"
 
 export default function Trailer() {

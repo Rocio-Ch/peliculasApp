@@ -1,14 +1,23 @@
-import { useParams } from "react-router-dom"
 import { useEffect } from "react"
-import { ImPlay2 } from "react-icons/im"
-import { Link } from "react-router-dom"
-import { BiSolidStar } from "react-icons/bi"
+import { useParams, Link } from "react-router-dom"
+
+// Environment Variables
 import { API_URL, API_KEY } from "../../apiTMDBapp"
+
+// Icons
+import { ImPlay2 } from "react-icons/im"
+import { BiSolidStar } from "react-icons/bi"
+
+// Components
 import SpinnerMovie from "./SpinnerMovie"
-import defaultBackdrop from "../assets/defaultBackdrop1.jpg"
-import defaultPoster from "../assets/defaultPoster.png"
+
+// Custom Hooks
 import useDataMovies from "../customHooks/useDataMovies"
 import useLoading from "../customHooks/useLoading"
+
+// Images
+import defaultPoster from "../assets/defaultPoster.png"
+import defaultBackdrop from "../assets/defaultBackdrop1.jpg"
 
 export default function DetailMovie() {
   const { getData, data } = useDataMovies()

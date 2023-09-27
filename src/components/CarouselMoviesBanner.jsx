@@ -1,11 +1,18 @@
-// Import Swiper React components
 import { useEffect } from "react"
+import { Link } from "react-router-dom"
+
+// Environment Variables
 import { API_URL, API_KEY } from "../../apiTMDBapp"
+
+// Import Swiper React components and modules
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay } from "swiper/modules"
-import { Link } from "react-router-dom"
 import { EffectFade, Navigation, Pagination } from "swiper/modules"
+
+// Custom Hooks
 import useDataMovies from "../customHooks/useDataMovies"
+
+// Import Swiper React styles
 import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/navigation"

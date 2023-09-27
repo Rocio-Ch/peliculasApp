@@ -1,7 +1,10 @@
+// Components
 import CarouselMoviesBanner from "./CarouselMoviesBanner"
 import CarouselPopular from "./CarouselPopular"
 import CarouselTopRated from "./CarouselTopRated"
 import SpinnerMovie from "./SpinnerMovie"
+
+// Custom Hooks
 import useLoading from "../customHooks/useLoading"
 
 export default function MainContainer() {

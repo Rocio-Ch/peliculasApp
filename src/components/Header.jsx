@@ -1,7 +1,11 @@
 import React from "react"
-import { MdClose } from "react-icons/md"
 import { Link, NavLink, useNavigate } from "react-router-dom"
+
+//Icons
+import { MdClose } from "react-icons/md"
 import { AiFillHome } from "react-icons/ai"
+
+// Material UI components and styles
 import { styled, alpha } from "@mui/material/styles"
 import AppBar from "@mui/material/AppBar"
 import Box from "@mui/material/Box"
@@ -18,7 +22,11 @@ import Toolbar from "@mui/material/Toolbar"
 import Button from "@mui/material/Button"
 import InputBase from "@mui/material/InputBase"
 import SearchIcon from "@mui/icons-material/Search"
+
+//Images
 import LogoPag from "../assets/logo2.png"
+
+//Custom Hooks
 import useDataMovies from "../customHooks/useDataMovies"
 
 const drawerWidth = 240

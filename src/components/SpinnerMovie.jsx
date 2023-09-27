@@ -1,3 +1,4 @@
+// Images
 import movieSpinner from "../assets/movieSpinner.gif"
 
 export default function SpinnerMovie() {

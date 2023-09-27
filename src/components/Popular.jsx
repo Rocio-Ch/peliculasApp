@@ -1,14 +1,22 @@
 import * as React from "react"
 import { useEffect } from "react"
-import { API_KEY, API_URL } from "../../apiTMDBapp"
 import { Link } from "react-router-dom"
+
+// Environment Variables
+import { API_KEY, API_URL } from "../../apiTMDBapp"
+
+// Material UI components and styles
 import Card from "@mui/material/Card"
 import CardMedia from "@mui/material/CardMedia"
-import SpinnerMovie from "./SpinnerMovie"
 import Typography from "@mui/material/Typography"
+
+// Components
+import SpinnerMovie from "./SpinnerMovie"
+import PaginationRounded from "./PaginationRounded"
+
+// Custom Hooks
 import useDataMovies from "../customHooks/useDataMovies"
 import useLoading from "../customHooks/useLoading"
-import PaginationRounded from "./PaginationRounded"
 
 export default function Popular() {
   const { getData, data, totalPages, currentPage, setCurrentPage } =
