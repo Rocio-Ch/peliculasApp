@@ -41,6 +41,11 @@ body {
 
 .css-bv1b19 {
   text-transform: none!important;
+  border-radius: 40px;
+}
+
+.css-bv1b19:hover {
+  background-color: #3b82f6!important;
 }
 
 .css-wjh20t-MuiPagination-ul {
