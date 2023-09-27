@@ -31,7 +31,7 @@ body {
 
 .css-1kkpk3h-MuiButtonBase-root-MuiButton-root:hover {
   background-color: #3b82f6!important;
-  border-radius: 40px;
+  border-radius: 40px!important;
 }
 
 .css-130f8nx {
@@ -41,7 +41,7 @@ body {
 
 .css-bv1b19 {
   text-transform: none!important;
-  border-radius: 40px;
+  border-radius: 40px!important;
 }
 
 .css-bv1b19:hover {
