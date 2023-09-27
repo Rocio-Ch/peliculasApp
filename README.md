@@ -1,4 +1,12 @@
-# Proyecto Peliculas App
+<div style="display: flex; align-items: center;">
+    <img src="./src/assets/logo2.png" alt="Logo peliculas app" width="100">
+    <h1 style="margin-left: 20px" >🎬 Peliculas App ⭐</h1>
+</div>
+
+
+
+
+# Proyecto
 
 Hola somos Rocio Magalí Chaparro y Verónica Guiñanen estudianes de Ada ITW y en esta oportunidad les mostramos el último proyecto del último módulo de React Js llamado Peliculas App.
 ***
@@ -41,7 +49,7 @@ En resumen, ofrece a los usuarios una experiencia completa para explorar y obten
 ### Ver el proyecto
 Para poder visualizar el proyecto simplemente colocá el siguiente enlace en tu navegador preferido:
 
-https://peliculas-app-tan.vercel.app/
+🎥 https://peliculas-app-tan.vercel.app/
 
 ### Preview del proyecto
 
