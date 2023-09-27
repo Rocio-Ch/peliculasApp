@@ -7,6 +7,7 @@ import Trailer from './components/Trailer';
 import NotFound from './components/NotFound';
 import LatestReleases from "./components/LatestReleases";
 import Popular from "./components/Popular";
+import SearchContainer from "./components/SearchContainer";
 
 export default function App() {
 
@@ -16,7 +17,7 @@ export default function App() {
     <BrowserRouter>
       <Header setSearch={setSearch} />
       <Routes>
-        <Route path='/' element={<MainContainer search={search} />} />
+        <Route path='/' element={!search ? <MainContainer search={search} /> : <SearchContainer search={search}/>} />
         <Route path='/latest-releases' element={ <LatestReleases/> } />
         <Route path='/popular' element={ <Popular /> } />
         <Route path='/description/:id' element={<DetailMovie />} />

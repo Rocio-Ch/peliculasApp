@@ -1,11 +1,10 @@
 import CarouselMoviesBanner from "./CarouselMoviesBanner"
 import CarouselPopular from "./CarouselPopular"
 import CarouselTopRated from "./CarouselTopRated"
-import SearchContainer from "./SearchContainer"
 import SpinnerMovie from "./SpinnerMovie"
 import useLoading from "../customHooks/useLoading"
 
-export default function MainContainer({ search }) {
+export default function MainContainer() {
   const loading = useLoading()
 
   return (
@@ -14,15 +13,9 @@ export default function MainContainer({ search }) {
         <SpinnerMovie />
       ) : (
         <>
-          {search === "" ? (
-            <>
-              <CarouselMoviesBanner />
-              <CarouselPopular />
-              <CarouselTopRated />
-            </>
-          ) : (
-            <SearchContainer search={search} />
-          )}
+          <CarouselMoviesBanner />
+          <CarouselPopular />
+          <CarouselTopRated />
         </>
       )}
     </main>
