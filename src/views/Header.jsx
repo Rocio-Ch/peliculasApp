@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, NavLink, useNavigate } from "react-router-dom"
 
 //Icons
@@ -72,7 +72,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }))
 
-export default function Header({ setSearch }) {
+export default function Header({ setSearch, search }) {
   const navigate = useNavigate()
 
   const { setCurrentPage } = useDataMovies();
@@ -81,6 +81,10 @@ export default function Header({ setSearch }) {
     setCurrentPage(1)
     setSearch(e.target.value)
     navigate("/")
+  }
+
+  function handleResetSearch() {
+    setSearch("")
   }
 
   const [mobileOpen, setMobileOpen] = React.useState(false)
@@ -93,7 +97,7 @@ export default function Header({ setSearch }) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <div className="flex">
         <MdClose size={40} style={{ color: "white", padding: "8px" }} />
-        <Link to="/">
+        <Link to="/" onClick={handleResetSearch}>
           <Box className="flex ml-[10px] h-[60px] w-[60px] min-[900px]:block min-[900px]:w-[90px] min-[900px]:h-[70px] min-[900px]:px-2.5">
             <img src={LogoPag} alt="Logo Cinema" />
           </Box>
@@ -101,21 +105,21 @@ export default function Header({ setSearch }) {
       </div>
       <Divider />
       <List>
-        <Link to="/">
+        <Link to="/" onClick={handleResetSearch}>
           <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: "start", marginLeft: "25px" }}>
               <AiFillHome />
             </ListItemButton>
           </ListItem>
         </Link>
-        <Link to="/latest-releases">
+        <Link to="/latest-releases" onClick={handleResetSearch}>
           <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: "start", marginLeft: "25px" }}>
               <ListItemText primary="Latest releases" />
             </ListItemButton>
           </ListItem>
         </Link>
-        <Link to="/popular">
+        <Link to="/popular" onClick={handleResetSearch}>
           <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: "start", marginLeft: "25px" }}>
               <ListItemText primary="Popular" />
@@ -140,7 +144,7 @@ export default function Header({ setSearch }) {
           >
             <MenuIcon />
           </IconButton>
-          <Link to="/">
+          <Link to="/" onClick={handleResetSearch}>
             <Box className="hidden h-[60px] w-[60px] min-[600px]:block min-[600px]:w-[90px] min-[600px]:h-[70px] min-[600px]:px-2.5 ">
               <img src={LogoPag} alt="Logo Cinema" />
               <h1 className="hidden">Peliculas App</h1>
@@ -148,15 +152,15 @@ export default function Header({ setSearch }) {
           </Link>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <NavLink exact={true.toString()} to="/" activeclassname="active">
-              <Button sx={{ color: "#fff" }}>
+              <Button sx={{ color: "#fff" }} onClick={handleResetSearch}>
                 <AiFillHome size={20} />
               </Button>
             </NavLink>
             <NavLink to="/latest-releases" activeclassname="active">
-              <Button sx={{ color: "#fff" }}>Latest releases</Button>
+              <Button sx={{ color: "#fff" }} onClick={handleResetSearch}>Latest releases</Button>
             </NavLink>
             <NavLink to="/popular" activeclassname="active">
-              <Button sx={{ color: "#fff" }}>Popular</Button>
+              <Button sx={{ color: "#fff" }} onClick={handleResetSearch}>Popular</Button>
             </NavLink>
           </Box>
           <Search>
@@ -168,6 +172,7 @@ export default function Header({ setSearch }) {
               id="inputSearch"
               placeholder="Search.."
               inputProps={{ "aria-label": "search" }}
+              value={search}
             />
           </Search>
         </Toolbar>

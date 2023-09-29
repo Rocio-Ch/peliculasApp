@@ -15,7 +15,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <Header setSearch={setSearch} />
+      <Header setSearch={setSearch} search={search} />
       <Routes>
         <Route path='/' element={!search ? <MainContainer search={search} /> : <SearchContainer search={search}/>} />
         <Route path='/latest-releases' element={ <LatestReleases/> } />
