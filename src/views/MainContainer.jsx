@@ -1,8 +1,8 @@
 // Components
-import CarouselMoviesBanner from "./CarouselMoviesBanner"
+import CarouselMoviesBanner from "../components/CarouselMoviesBanner"
 import CarouselPopular from "./CarouselPopular"
 import CarouselTopRated from "./CarouselTopRated"
-import SpinnerMovie from "./SpinnerMovie"
+import SpinnerMovie from "../components/SpinnerMovie"
 
 // Custom Hooks
 import useLoading from "../customHooks/useLoading"

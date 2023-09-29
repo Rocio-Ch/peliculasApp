@@ -5,9 +5,9 @@ import { useEffect } from "react"
 import { API_KEY, API_URL } from "../../apiTMDBapp"
 
 // Components
-import SpinnerMovie from "./SpinnerMovie"
-import PaginationRounded from "./PaginationRounded"
-import CardMovie from "./CardMovie"
+import SpinnerMovie from "../components/SpinnerMovie"
+import PaginationRounded from "../components/PaginationRounded"
+import CardMovie from "../components/CardMovie"
 
 // Custom Hooks
 import useDataMovies from "../customHooks/useDataMovies"

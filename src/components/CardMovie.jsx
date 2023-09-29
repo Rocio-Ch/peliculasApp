@@ -1,12 +1,15 @@
-import * as React from "react";
-import { Link } from "react-router-dom";
+import * as React from "react"
+import { Link } from "react-router-dom"
 
 // Material UI components and styles
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card"
+import CardMedia from "@mui/material/CardMedia"
+import Typography from "@mui/material/Typography"
 
-export default function LatestReleases({ id, title, poster }) {
+// Images
+import defaultPoster from "../assets/defaultPoster.png"
+
+export default function CardMovie({ id, title, poster }) {
 
   return (
     <Link to={`/description/${id}`} key={id}>
@@ -14,8 +17,12 @@ export default function LatestReleases({ id, title, poster }) {
         <CardMedia
           className="h-[300px]"
           component="img"
-          alt={title}
-          image={`https://image.tmdb.org/t/p/w500${poster}`}
+          alt={`Poster ${title}`}
+          image={
+            poster
+              ? `https://image.tmdb.org/t/p/original/${poster}`
+              : defaultPoster
+          }
         />
         <Typography
           sx={{
@@ -30,5 +37,5 @@ export default function LatestReleases({ id, title, poster }) {
         </Typography>
       </Card>
     </Link>
-  );
+  )
 }

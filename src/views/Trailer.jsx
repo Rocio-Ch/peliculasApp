@@ -8,7 +8,7 @@ import { API_URL, API_KEY } from "../../apiTMDBapp"
 import { RiCloseLine } from "react-icons/ri"
 
 // Components
-import SpinnerMovie from "./SpinnerMovie"
+import SpinnerMovie from "../components/SpinnerMovie"
 
 // Custom Hooks
 import useLoading from "../customHooks/useLoading"

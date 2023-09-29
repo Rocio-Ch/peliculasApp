@@ -5,13 +5,13 @@ import { useEffect } from "react"
 import { API_KEY, API_URL } from "../../apiTMDBapp"
 
 // Components
-import SpinnerMovie from "./SpinnerMovie"
-import PaginationRounded from "./PaginationRounded"
+import SpinnerMovie from "../components/SpinnerMovie"
+import PaginationRounded from "../components/PaginationRounded"
 
 // Custom Hooks
 import useDataMovies from "../customHooks/useDataMovies"
 import useLoading from "../customHooks/useLoading"
-import CardMovie from "./CardMovie"
+import CardMovie from "../components/CardMovie"
 
 export default function LatestReleases() {
   const { getData, data, totalPages, currentPage, setCurrentPage } =

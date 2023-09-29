@@ -9,7 +9,7 @@ import { ImPlay2 } from "react-icons/im"
 import { BiSolidStar } from "react-icons/bi"
 
 // Components
-import SpinnerMovie from "./SpinnerMovie"
+import SpinnerMovie from "../components/SpinnerMovie"
 
 // Custom Hooks
 import useDataMovies from "../customHooks/useDataMovies"

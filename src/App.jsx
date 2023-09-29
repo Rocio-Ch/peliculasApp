@@ -1,13 +1,13 @@
-import { useState } from "react";
+import { useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Header from './components/Header';
-import MainContainer from './components/MainContainer';
-import DetailMovie from './components/DetailMovie';
-import Trailer from './components/Trailer';
-import NotFound from './components/NotFound';
-import LatestReleases from "./components/LatestReleases";
-import Popular from "./components/Popular";
-import SearchContainer from "./components/SearchContainer";
+import Header from './views/Header'
+import MainContainer from './views/MainContainer'
+import DetailMovie from './views/DetailMovie'
+import Trailer from './views/Trailer'
+import NotFound from './components/NotFound'
+import LatestReleases from "./views/LatestReleases"
+import Popular from "./views/Popular"
+import SearchContainer from "./views/SearchContainer"
 
 export default function App() {
 
@@ -25,5 +25,5 @@ export default function App() {
         <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
